@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Enrollment Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <section class="card">
+
+            <div class="heading">
+                <p class="small-title">COLUMBAN COLLEGE</p>
+                <h1>Student Enrollment Form</h1>
+                <p class="subtitle">
+                    Please complete the form below with your enrollment information.
+                </p>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" value="Jane Cruz">
+                </div>
+
+                <div class="field">
+                    <label for="sid">Student ID</label>
+                    <input type="text" id="sid" value="2026-04891">
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="jane.cruz@example.edu">
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" value="+63 912 345 6789">
+                </div>
+
+                <div class="field">
+                    <label for="course">Course</label>
+
+                    <select id="course">
+                        <option>BS Information Technology</option>
+                        <option selected>BS Computer Science</option>
+                        <option>BS Multimedia Arts</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" value="2006-03-14">
+                </div>
+
+                <div class="field full">
+                    <label>Year Level</label>
+
+                    <div class="radio-group">
+
+                        <span class="radio-row">
+                            <input type="radio" name="year" id="y1">
+                            <label for="y1">1st</label>
+                        </span>
+
+                        <span class="radio-row">
+                            <input type="radio" name="year" id="y2">
+                            <label for="y2">2nd</label>
+                        </span>
+
+                        <span class="radio-row">
+                            <input type="radio" name="year" id="y3" checked>
+                            <label for="y3">3rd</label>
+                        </span>
+
+                        <span class="radio-row">
+                            <input type="radio" name="year" id="y4">
+                            <label for="y4">4th</label>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="field full">
+                    <label for="address">Address</label>
+
+                    <textarea id="address" rows="3">123 Sampaguita St., Cabanatuan City, Nueva Ecija</textarea>
+                </div>
+
+                <div class="field full">
+                    <label for="message">Message to the Registrar</label>
+
+                    <textarea id="message" rows="3">Please confirm my schedule for the coming semester.</textarea>
+                </div>
+
+                <div class="field full">
+                    <span class="checkline">
+
+                        <input type="checkbox" id="news" checked>
+
+                        <label for="news">
+                            Send me updates about enrollment
+                        </label>
+
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button type="button" onclick="window.print()">
+                    Print Form
+                </button>
+
+            </div>
+
+        </section>
+
+        <div class="print-only">
+
+            <p>Parent / Guardian Signature</p>
+
+            <div class="signature-line"></div>
+
+            <p class="print-note">
+                Printed for manual signing.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

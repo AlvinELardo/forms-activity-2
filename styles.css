@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fdf3f7;
+    color: #25232a;
+    font-family: "Space Grotesk", Arial, sans-serif;
+}
+
+.page {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 2px solid #f0c96a;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 12px 35px rgba(150, 100, 120, 0.12);
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.small-title {
+    margin: 0 0 8px;
+    color: #d79b32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    color: #d89b34;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: #b86b86;
+    font-size: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 24px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field > label {
+    margin-bottom: 8px;
+    color: #44404a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #e8c9d4;
+    border-radius: 12px;
+    padding: 13px 14px;
+    background: #fffafb;
+    color: #29252b;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #e3ad48;
+    box-shadow: 0 0 0 3px rgba(227, 173, 72, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.radio-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.radio-row input {
+    width: auto;
+}
+
+.radio-row label {
+    margin: 0;
+    font-size: 14px;
+}
+
+.checkline {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.checkline input {
+    width: auto;
+}
+
+.checkline label {
+    font-size: 14px;
+    color: #55515a;
+}
+
+.buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 20px;
+    background: linear-gradient(90deg, #e98cae, #e6b84e);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.print-only {
+    display: none;
+}
+
+
+/* =========================
+   RESPONSIVE MEDIA QUERY
+   ========================= */
+
+@media screen and (max-width: 640px) {
+
+    .page {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field.full {
+        grid-column: auto;
+    }
+
+    .radio-group {
+        gap: 12px;
+    }
+}
+
+
+/* =========================
+   PRINT MEDIA QUERY
+   ========================= */
+
+@media print {
+
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .page {
+        max-width: none;
+        padding: 0;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .heading {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .small-title {
+        color: #000000;
+    }
+
+    h1 {
+        color: #000000;
+        font-size: 18pt;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 6px;
+    }
+
+    .subtitle {
+        color: #000000;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+        border: none;
+        background: transparent;
+        padding: 0;
+        color: #000000;
+        font-size: 11pt;
+        box-shadow: none;
+    }
+
+    .field textarea {
+        min-height: 0;
+        overflow: visible;
+    }
+
+    .field > label {
+        color: #333333;
+        font-size: 9pt;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .print-only {
+        display: block;
+        margin-top: 40px;
+    }
+
+    .signature-line {
+        border-bottom: 1px solid #000000;
+        width: 320px;
+        height: 32px;
+        margin-bottom: 6px;
+    }
+
+    .print-note {
+        color: #333333;
+        font-size: 9pt;
+    }
+}
